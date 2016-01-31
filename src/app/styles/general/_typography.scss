@@ -1,0 +1,107 @@
+
+%font--default {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+
+body {
+  @extend %font--default;
+
+  color: #{map-get($colors, text)};
+  font-size: 15px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &[ng-click] {
+    cursor: pointer;
+  }
+
+}
+
+.anchor--hover {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
+strong {
+  font-weight: 500;
+}
+
+.align--centre {
+  text-align: center;
+}
+
+// Titles
+
+%title {
+  font-weight: 500;
+}
+
+.title--main {
+  @extend %title;
+  color: #{map-get($colors, primary)};
+  font-size: 4.2em;
+
+  strong {
+    font-weight: 900;
+  }
+
+}
+
+.title--sub {
+  @extend %title;
+  color: #{map-get($colors, text-light)};
+  font-size: 1.2em;
+  text-transform: uppercase;
+
+  strong {
+    color: #{map-get($colors, text-medium)};
+    font-weight: 900;
+  }
+
+}
+
+.title--section {
+  @extend %title;
+  color: #{map-get($colors, text-medium)};
+  font-size: 1.2em;
+}
+
+// Text
+
+.text--with-label {
+  color: #{map-get($colors, text-light)};
+  font-size: 13px;
+
+  label {
+    display: inline-block;
+    min-width: 80px;
+    margin-right: 10px;
+  }
+
+  .value {
+    font-weight: bold;
+  }
+
+}
+
+.text--general {
+  color: #6E7680;
+  line-height: 1.3em;
+}
+
+.text--sml {
+  color: #{map-get($colors, text-medium)};
+  font-size: 13px;
+}
+
+.text--comment {
+  line-height: 19px;
+  max-width: 680px;
+}

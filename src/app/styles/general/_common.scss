@@ -1,0 +1,33 @@
+
+%reaction-active-pushdown {
+  @include transition(transform 150ms ease);
+
+  &:active {
+    transform: translate(0, 2px);
+  }
+
+  &.state--disabled {
+
+    &:active {
+      transform: translate(0, 0);
+    }
+
+  }
+
+}
+
+.general-max-width {
+  width: 100%;
+  max-width: #{map-get($site, max-width)};
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: #{map-get($site, padding)};
+  padding-right: #{map-get($site, padding)};
+}
+
+.img-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+

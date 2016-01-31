@@ -1,0 +1,28 @@
+$colors: (
+  active: #E64C31,
+  anchor: #6A9CC1,
+  primary: #2093EB,
+  primary--dark: darken(#2DAEFF, 20),
+  anti-primary: #FF6C00,
+  text: #3E4248,
+  text-medium: #8B9FAF,
+  text-light: #B2C2CF,
+  text-blue: #0A65B5,
+  site-background: #F0F4F7,
+  shade: #D9E0E8,
+  focus: #B7C6D8,
+  shade-faint: #EEF3F7
+);
+
+$seed: (
+  height: 140px
+);
+
+$site: (
+  max-width: 1250px,
+  padding: 25px
+);
+
+$header: (
+  height: 40px
+);
