@@ -12,7 +12,7 @@
   &:focus {
     outline: none;
   }
-  
+
   &.state--disabled {
     cursor: default;
   }
@@ -29,87 +29,18 @@
 
 }
 
-.btn--vote {
+.btn--action {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
 
-  @extend %reaction-active-pushdown;
-
-  @include border-radius(5px);
-  background-color: transparentize(map-get($colors, primary), 0.5);
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  line-height: 30px;
-
-  background: none;
-  border: 1px solid #{map-get($colors, primary)};
-  color: #{map-get($colors, primary)};
-
-  display: block;
-
-  &.state--ignored {
-    border-color: transparentize(map-get($colors, primary), 0.5);
-    color: transparentize(map-get($colors, primary), 0.5);
-  }
-
-  &.state--liked,
-  &:hover {
-    background-color: #{map-get($colors, primary)};
-    color: #ffffff;
-  }
-
-  &.btn--vote--negative {
-    background: none;
-    border-color: #{map-get($colors, anti-primary)};
-    color: #{map-get($colors, anti-primary)};
-
-    &.state--ignored {
-      border-color: transparentize(map-get($colors, anti-primary), 0.5);
-      color: transparentize(map-get($colors, anti-primary), 0.5);
-    }
-
-    &.state--liked,
-    &:hover {
-      background-color: #{map-get($colors, anti-primary)};
-      color: #ffffff;
-    }
-
-  }
-
-}
-
-.btn--submit {
-  @include border-radius(3px);
-  font-weight: 700;
-  padding: 4px 8px;
-
-  background-color: #{map_get($colors, primary)};
-  color: #ffffff;
+  border: 2px solid #{map-get($colors, active)};
+  color: #{map-get($colors, active)};
+  padding: 8px 12px;
 
   &.state--disabled {
-    background-color: #D1E2EF;
-    color: #93B6CE;
-    cursor: default;
+    border-color: #dddddd;
+    color: #dddddd;
   }
 
-  &.plain {
-    background-color: transparent;
-    color: #CDD7DE;
-
-    &:hover {
-      color: #869DAD;
-    }
-
-  }
-
-}
-
-.btn--major {
-  @extend %reaction-active-pushdown;
-  @include border-radius(3px);
-
-  background-color: #{map_get($colors, primary)};
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 16px;
 }

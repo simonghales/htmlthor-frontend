@@ -1,27 +1,32 @@
-<section class="page page--default">
+<section class="page page--intro">
   <div class="general-max-width">
     <section class="site-intro align--centre">
       <h1 class="title--main"><strong>HTML</strong>THOR</h1>
       <h2 class="title--sub"><strong>Validate</strong> your HTML code against the <strong>HTML5 spec</strong></h2>
     </section>
-    <section class="intro-section">
-      <h3>Upload Files</h3>
-      <section>
-        <p>
-          <strong>Drag and drop</strong> your html files here
-          or <strong>click to upload</strong>
-        </p>
+    <section class="tabbed-content intro-section">
+      <header class="tabbed-content__header">
+        <h3 class="title title--section tabbed-content__tab state--active">Upload Files</h3>
+        <h3 class="title title--section tabbed-content__tab">Direct Input</h3>
+      </header>
+      <section class="tabbed-content__body">
+        <section class="tabbed-content__section state--active">
+          <section class="drag-drop ">
+            <p>
+              <strong>Drag and drop</strong> your html files here
+              or <strong>click to upload</strong>
+            </p>
+          </section>
+        </section>
+        <section class="tabbed-content__section">
+          <form class="">
+            <textarea class="textarea--main" id="input--code"></textarea>
+          </form>
+        </section>
       </section>
     </section>
-    <section class="intro-section">
-      or
-    </section>
-    <form class="intro-section">
-      <label for="input--code"><h3>Enter Code</h3></label>
-      <textarea id="input--code"></textarea>
-    </form>
-    <section class="intro-section">
-      <button class="btn">Validate</button>
+    <section class="intro-section flex--centre">
+      <button class="btn btn--action ">Validate</button> <!-- state--disabled -->
     </section>
   </div>
 </section>

@@ -47,30 +47,35 @@ strong {
   @extend %title;
   color: #{map-get($colors, primary)};
   font-size: 4.2em;
+  font-weight: 300;
 
   strong {
-    font-weight: 900;
+    //font-weight: 900;
+    font-weight: 300;
   }
 
 }
 
 .title--sub {
   @extend %title;
-  color: #{map-get($colors, text-light)};
+  color: #{map-get($colors, text-medium)};
   font-size: 1.2em;
   text-transform: uppercase;
+  font-weight: 300;
 
   strong {
-    color: #{map-get($colors, text-medium)};
-    font-weight: 900;
+    //color: #{map-get($colors, text-medium)};
+    font-weight: 400;
   }
 
 }
 
 .title--section {
   @extend %title;
-  color: #{map-get($colors, text-medium)};
-  font-size: 1.2em;
+  color: #{map-get($colors, primary)};
+  font-size: 1.1em;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 // Text
@@ -104,4 +109,10 @@ strong {
 .text--comment {
   line-height: 19px;
   max-width: 680px;
+}
+
+.text--faint {
+  color: #{map-get($colors, text-light)};
+  font-size: 1.2em;
+  font-weight: 500;
 }

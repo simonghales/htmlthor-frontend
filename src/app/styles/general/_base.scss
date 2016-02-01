@@ -17,6 +17,9 @@
 
 body {
   background-color: #{map-get($colors, site-background)};
+  //background-image: url(/assets/images/background.jpg);
+  //background-size: cover;
+  //background-attachment: fixed;
 }
 
 img {

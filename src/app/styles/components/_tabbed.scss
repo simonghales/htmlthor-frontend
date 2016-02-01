@@ -1,0 +1,32 @@
+
+.tabbed-content {}
+
+  .tabbed-content__header {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+    .tabbed-content__tab {
+      //border-bottom: 2px solid #cccccc;
+      color: #cccccc;
+      cursor: pointer;
+      //margin-right: 5px;
+      padding: 0 10px;
+
+      &:hover,
+      &.state--active {
+        color: #{map-get($colors, active)};
+      }
+
+    }
+
+  .tabbed-content__body {}
+
+    .tabbed-content__section {
+      display: none;
+
+      &.state--active {
+        display: block;
+      }
+
+    }
