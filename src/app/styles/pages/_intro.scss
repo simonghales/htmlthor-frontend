@@ -65,8 +65,22 @@
 
   }
 
+  .form-main {
+    line-height: 0;
+  }
+
   .textarea--main {
+    @include border-radius(3px);
     width: 100%;
     resize: none;
     height: 240px;
+    border: 1px solid #{map-get($colors, primary)};
+    padding: 20px;
+    font-size: 1em;
+
+    &:focus {
+      border-color: #{map-get($colors, active)};
+      outline: none;
+    }
+
   }

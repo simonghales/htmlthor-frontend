@@ -6,11 +6,20 @@
     </section>
     <section class="tabbed-content intro-section">
       <header class="tabbed-content__header">
-        <h3 class="title title--section tabbed-content__tab state--active">Upload Files</h3>
-        <h3 class="title title--section tabbed-content__tab">Direct Input</h3>
+        <h3 ng-click="mainVM.changeTab('upload');"
+            ng-class="{
+                  'state--active': mainVM.states.tabs.active === 'upload'
+                 }" class="title title--section tabbed-content__tab">Upload Files</h3>
+        <h3 ng-click="mainVM.changeTab('direct');"
+            ng-class="{
+                  'state--active': mainVM.states.tabs.active === 'direct'
+                 }" class="title title--section tabbed-content__tab">Direct Input</h3>
       </header>
       <section class="tabbed-content__body">
-        <section class="tabbed-content__section state--active">
+        <section ng-class="{
+                  'state--active': mainVM.states.tabs.active === 'upload'
+                 }"
+                 class="tabbed-content__section">
           <section class="drag-drop ">
             <p>
               <strong>Drag and drop</strong> your html files here
@@ -18,15 +27,23 @@
             </p>
           </section>
         </section>
-        <section class="tabbed-content__section">
-          <form class="">
-            <textarea class="textarea--main" id="input--code"></textarea>
+        <section ng-class="{
+                  'state--active': mainVM.states.tabs.active === 'direct'
+                 }"
+                 class="tabbed-content__section">
+          <form class="form-main">
+            <textarea ng-model="mainVM.models.direct"
+                      class="textarea--main" id="input--code"
+                      placeholder="<!doctype>"></textarea>
           </form>
         </section>
       </section>
     </section>
     <section class="intro-section flex--centre">
-      <button class="btn btn--action ">Validate</button> <!-- state--disabled -->
+      <button ng-class="{
+                'state--disabled': !mainVM.models.direct
+              }"
+              class="btn btn--action ">Validate</button> <!-- state--disabled -->
     </section>
   </div>
 </section>

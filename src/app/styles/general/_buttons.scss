@@ -35,10 +35,13 @@
   font-weight: 500;
 
   border: 2px solid #{map-get($colors, active)};
-  color: #{map-get($colors, active)};
+  //color: #{map-get($colors, active)};
+  background-color: #{map-get($colors, active)};
+  color: #ffffff;
   padding: 8px 12px;
 
   &.state--disabled {
+    background: none;
     border-color: #dddddd;
     color: #dddddd;
   }
